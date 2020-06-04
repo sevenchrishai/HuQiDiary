@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/common_title_ll"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:paddingTop="20dp"
+                android:fitsSystemWindows="true"
+                android:background="@android:color/transparent"
+>
+
+    <ImageView
+            android:id="@+id/common_iv_back"
+            android:layout_marginLeft="10dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/back_icon"
+    />
+
+    <ImageView
+            android:id="@+id/common_iv_girl"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/common_iv_back"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/leftcorner"
+    />
+
+    <ImageView
+            android:id="@+id/common_iv_diary"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/login_header"
+    />
+
+    <ImageView
+            android:id="@+id/common_iv_search"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/search"
+    />
+
+    <TextView
+            android:id="@+id/common_tv_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="完成"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+    />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#fff"
+            android:layout_alignParentBottom="true"
+            android:paddingTop="4dp"
+    />
+
+
+</RelativeLayout>

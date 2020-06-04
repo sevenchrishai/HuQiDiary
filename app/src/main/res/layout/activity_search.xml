@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@mipmap/background"
+              android:fitsSystemWindows="true"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:fitsSystemWindows="true"
+            android:background="#fff"
+            android:layout_height="54dp">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/gray_btn"
+                android:layout_height="34dp">
+
+            <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:src="@mipmap/back_icon_black"/>
+
+            <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:text=""
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:background="@null"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_search"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+    ></android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>

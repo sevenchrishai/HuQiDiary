@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:id="@+id/ll_addDiary_page"
+              android:background="@mipmap/background"
+>
+
+    <include
+            layout="@layout/part_common_title"
+    />
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+    >
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_marginBottom="50dp"
+        >
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/add_diary_tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2019年06月05日"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_color"
+                />
+
+                <TextView
+                        android:id="@+id/add_diary_tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="16:17"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_color"
+                        android:layout_toRightOf="@+id/add_diary_tv_date"
+                        android:layout_marginLeft="20dp"
+                />
+
+                <TextView
+                        android:id="@+id/add_diary_tv_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="星期三"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_color"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/add_diary_tv_weather"
+                />
+
+                <TextView
+                        android:id="@+id/add_diary_tv_weather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="晴"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_color"
+                        android:layout_alignParentRight="true"
+                />
+
+            </RelativeLayout>
+
+            <com.ylh.huqidiary.widget.LinedEditText
+                    android:id="@+id/add_diary_et_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:enabled="true"
+                    android:gravity="top"
+                    android:lineSpacingExtra="5dp"
+                    android:maxLines="100"
+                    android:minLines="10"
+                    android:paddingTop="30dp"
+                    android:paddingBottom="30dp"
+                    android:scrollbars="vertical"
+                    android:textSize="12sp"
+                    android:background="@android:color/transparent"
+            />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+        >
+            <com.ylh.huqidiary.widget.ColorPickerView
+                    android:id="@+id/color_pick"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:indicatorEnable="true"
+                    app:indicatorColor="#fff"
+                    app:orientation="horizontal"
+                    android:visibility="invisible"
+                    android:layout_alignParentTop="true"
+            />
+
+            <android.support.v7.widget.AppCompatSeekBar
+                    android:id="@+id/seekbar_aa"
+                    android:layout_width="match_parent"
+                    android:visibility="invisible"
+                    android:max="20"
+                    android:layout_centerInParent="true"
+                    android:layout_height="40dp"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:background="#fff"
+            >
+
+                <ImageButton
+                        android:id="@+id/add_diary_ib_aa"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/icon_aa"
+                        android:background="@null"
+                        android:focusableInTouchMode="false"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"/>
+                <ImageButton
+                        android:id="@+id/add_diary_ib_pifu"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/icon_pifu"
+                        android:background="@null"
+                        android:focusableInTouchMode="false"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"/>
+                <ImageButton
+                        android:id="@+id/add_diary_ib_pic"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/icon_pic"
+                        android:background="@null"
+                        android:focusableInTouchMode="false"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"/>
+                <ImageButton
+                        android:id="@+id/add_diary_ib_weather"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/icon_weather"
+                        android:background="@null"
+                        android:focusableInTouchMode="false"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <cc.trity.floatingactionbutton.FloatingActionsMenu
+                android:id="@+id/right_labels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                app:fab_expandDirection="right"
+                app:fab_colorNormal="#f0f01a"
+                app:fab_icon="@drawable/menu"
+                app:fab_addButtonSize="mini"
+                android:visibility="gone"
+        >
+
+            <cc.trity.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/add_diary_fab_back"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:fab_colorNormal="#24d63c"
+                    app:fab_size="normal"
+                    app:fab_icon="@drawable/save_new"
+            />
+
+            <cc.trity.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/add_diary_fab_add"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/save"
+                    app:fab_size="normal"
+                    app:fab_title="FAB 2"
+                    app:fab_colorNormal="#e41c1c"
+                    app:fab_icon="@drawable/back_new"
+            />
+
+            />
+
+
+        </cc.trity.floatingactionbutton.FloatingActionsMenu>
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

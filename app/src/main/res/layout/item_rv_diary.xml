@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:paddingBottom="1dp"
+        app:ios="false"
+        app:leftSwipe="true"
+        app:swipeEnable="true">
+
+    <LinearLayout android:id="@+id/item_ll"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:background="@android:color/transparent"
+    >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+        >
+
+            <RelativeLayout
+                    android:layout_width="66dp"
+                    android:layout_height="match_parent"
+            >
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="36dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="11dp">
+
+                    <TextView
+                            android:id="@+id/main_tv_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="31"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                    />
+
+                    <TextView
+                            android:id="@+id/main_tv_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:paddingLeft="4dp"
+                            android:text="5月"
+                            android:textSize="10sp"
+                    />
+
+                </LinearLayout>
+
+
+                <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#E1EBEC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_alignParentRight="true"
+                />
+
+
+                <ImageView
+                        android:id="@+id/main_iv_circle"
+                        android:paddingTop="2dp"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/shape_cicle"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="-11dp"
+                        android:layout_marginTop="36dp"
+                />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+            >
+
+                <LinearLayout
+                        android:id="@+id/item_ll_control"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/diary_qipao"
+                        android:padding="10dp"
+                        android:layout_margin="12dp"
+                >
+
+                    <TextView
+                            android:id="@+id/main_tv_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:lineSpacingExtra="4dp"
+                            android:text="在这里写些什么在这里写些什么在这里写些什么在这里写些什么在这里写些什么在这里写些什么在这里写些什么在这里写些什么在这里写些什么在这里 写些什么在这里写些什么在这里写些什么在这里写些什么在这里写些什么在这里写些什么在这里写些什么"
+                            android:lines="2"
+                            android:maxLines="3"
+                            android:ellipsize="end"
+                            android:textColor="#333"
+                            android:textSize="14sp"
+                    />
+
+                    <RelativeLayout android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                        <TextView
+                                android:id="@+id/main_tv_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="19:25"
+                                android:textSize="12sp"
+                                android:textColor="#aaa"
+                                android:layout_marginLeft="10dp"
+
+                        />
+
+                        <ImageView
+                                android:id="@+id/iv_today"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:visibility="invisible"
+                                android:src="@drawable/today"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                        android:paddingTop="2dp"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/shape_cicle"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="-11dp"
+                        android:layout_marginTop="36dp"
+                />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_red_dark"
+            android:text="删除"
+            android:textColor="@android:color/white"/>
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
